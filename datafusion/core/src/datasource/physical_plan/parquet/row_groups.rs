@@ -117,11 +117,10 @@ pub(crate) async fn prune_row_groups_by_bloom_filters<
     arrow_schema: &Schema,
     builder: &mut ParquetRecordBatchStreamBuilder<T>,
     row_groups: &[usize],
-    groups: &[RowGroupMetaData],
     predicate: &PruningPredicate,
     metrics: &ParquetFileMetrics,
 ) -> Vec<usize> {
-    let mut filtered = Vec::with_capacity(groups.len());
+    let mut filtered = Vec::with_capacity(row_groups.len());
     for idx in row_groups {
         // get all columns in the predicate that we could use a bloom filter with
         let literal_columns = predicate.literal_columns();
@@ -1332,7 +1331,6 @@ mod tests {
             pruning_predicate.schema(),
             &mut builder,
             row_groups,
-            metadata.row_groups(),
             pruning_predicate,
             &file_metrics,
         )
