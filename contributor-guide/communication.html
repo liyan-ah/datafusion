@@ -34,7 +34,7 @@
     <script async="true" defer="true" src="https://buttons.github.io/buttons.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Architecture" href="architecture.html" />
+    <link rel="next" title="Getting Started" href="getting_started.html" />
     <link rel="prev" title="Introduction" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -106,7 +106,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://github.com/apache/datafusion">
-   Github and Issue Tracker
+   GitHub and Issue Tracker
   </a>
  </li>
  <li class="toctree-l1">
@@ -120,8 +120,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference external" href="https://datafusion.apache.org/blog/">
+   Blog
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference external" href="https://github.com/apache/datafusion/blob/main/CODE_OF_CONDUCT.md">
    Code of conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../download.html">
+   Download
   </a>
  </li>
 </ul>
@@ -139,6 +149,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../user-guide/example-usage.html">
    Example Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../user-guide/crate-configuration.html">
+   Crate Configuration
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -266,6 +281,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../user-guide/explain-usage.html">
+   Reading Explain Plans
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../user-guide/faq.html">
    Frequently Asked Questions
   </a>
@@ -333,6 +353,11 @@
    Profiling Cookbook
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../library-user-guide/query-optimizer.html">
+   DataFusion Query Optimizer
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -351,8 +376,23 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="architecture.html">
    Architecture
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="testing.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="howtos.html">
+   HOWTOs
   </a>
  </li>
  <li class="toctree-l1">
@@ -361,13 +401,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="quarterly_roadmap.html">
-   Quarterly Roadmap
+  <a class="reference internal" href="governance.html">
+   Governance
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="governance.html">
-   Governance
+  <a class="reference internal" href="inviting.html">
+   Inviting New Committers and PMC Members
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -391,6 +431,28 @@
     </a>
    </li>
   </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DataFusion Subprojects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arrow.apache.org/ballista/">
+   DataFusion Ballista
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://datafusion.apache.org/comet/">
+   DataFusion Comet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://datafusion.apache.org/python/">
+   DataFusion Python
+  </a>
  </li>
 </ul>
 
@@ -499,9 +561,31 @@ conduct</a>.</p>
 <p>We use the Slack and Discord platforms for informal discussions and coordination. These are great places to
 meet other contributors and get guidance on where to contribute. It is important to note that any technical designs and
 decisions are made fully in the open, on GitHub.</p>
-<p>Most of us use the <code class="docutils literal notranslate"><span class="pre">#datafusion</span></code> and <code class="docutils literal notranslate"><span class="pre">#arrow-rust</span></code> channels in the <a class="reference external" href="https://s.apache.org/slack-invite">ASF Slack
+<p>Most of us use the <a class="reference external" href="https://s.apache.org/slack-invite">ASF Slack
 workspace</a> and the <a class="reference external" href="https://discord.gg/Qw5gKqHxUM">Arrow Rust Discord
 server</a> for discussions.</p>
+<p>There are specific channels for Arrow, DataFusion, and the DataFusion subprojects (Ballista, Comet, Python, etc).</p>
+<p>In Slack we use these channels:</p>
+<ul class="simple">
+<li><p>#arrow</p></li>
+<li><p>#arrow-rust</p></li>
+<li><p>#datafusion</p></li>
+<li><p>#datafusion-ballista</p></li>
+<li><p>#datafusion-comet</p></li>
+<li><p>#datafusion-python</p></li>
+</ul>
+<p>In Discord we use these channels:</p>
+<ul class="simple">
+<li><p>#ballista</p></li>
+<li><p>#comet</p></li>
+<li><p>#contrib-federation</p></li>
+<li><p>#datafusion</p></li>
+<li><p>#datafusion-python</p></li>
+<li><p>#dolomite-optimizer</p></li>
+<li><p>#general</p></li>
+<li><p>#hiring</p></li>
+<li><p>#incremental-materialized-views</p></li>
+</ul>
 <p>Unfortunately, due to spammers, the ASF Slack workspace requires an invitation
 to join. We are happy to invite you – please ask for an invitation in the
 Discord server.</p>
@@ -541,10 +625,10 @@ mailing list for release coordination and other project-wide discussions. Links:
             <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="architecture.html" title="next page">
+    <a class='right-next' id="next-link" href="getting_started.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Architecture</p>
+        <p class="prev-next-title">Getting Started</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -570,7 +654,7 @@ mailing list for release coordination and other project-wide discussions. Links:
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br>
 </p>
     </div>
     

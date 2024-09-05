@@ -38,11 +38,11 @@ CREATE EXTERNAL TABLE
   my_table(a bigint, b bigint)
   STORED AS csv
   COMPRESSION TYPE gzip
-  WITH HEADER ROW
   DELIMITER ';'
   LOCATION '/test/location/my_csv_table/'
   OPTIONS(
-    NULL_VALUE 'NAN'
+    NULL_VALUE 'NAN',
+    'has_header' 'true'
   )
 ```
 
@@ -69,6 +69,16 @@ COPY source_table
 In this example, we write the entirety of `source_table` out to a folder of parquet files. One parquet file will be written in parallel to the folder for each partition in the query. The next option `compression` set to `snappy` indicates that unless otherwise specified all columns should use the snappy compression codec. The option `compression::col1` sets an override, so that the column `col1` in the parquet file will use `ZSTD` compression codec with compression level `5`. In general, parquet options which support column specific settings can be specified with the syntax `OPTION::COLUMN.NESTED.PATH`.
 
 ## Available Options
+
+### Execution Specific Options
+
+The following options are available when executing a `COPY` query.
+
+| Option                              | Description                                                                        | Default Value |
+| ----------------------------------- | ---------------------------------------------------------------------------------- | ------------- |
+| execution.keep_partition_by_columns | Flag to retain the columns in the output data when using `PARTITIONED BY` queries. | false         |
+
+Note: `execution.keep_partition_by_columns` flag can also be enabled through `ExecutionOptions` within `SessionConfig`.
 
 ### JSON Format Specific Options
 
